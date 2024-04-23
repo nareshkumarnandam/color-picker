@@ -70,12 +70,46 @@ h1{
   margin: 40px;
 }
 .hexCode{
+  position: relative;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all .2s;
+  padding: 0;
+  margin: 10px;
 }
-.hexCode:hover{
-  color: cornflowerblue;
+.hexCode .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-transform: capitalize;
+}
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.hexCode:hover .tooltiptext{
+  /* color: cornflowerblue; */
+  visibility: visible;
+  opacity: 1;
 }

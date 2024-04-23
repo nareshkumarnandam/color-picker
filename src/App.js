@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GetColorName } from 'hex-color-to-color-name';
 import './App.css';
 
 const App = () => {
+  const [copyText, setCopyText] = useState("Copy");
 
   function randomColor(){
     let codeFigures = "0123456789abcdef";
@@ -28,7 +29,10 @@ randomColor();
             navigator.clipboard.writeText(color);
             alert("Copied to clipboard");
             // console.log(navigator);
-        }} >{color}</p>
+        }} >{color}
+        <span class="tooltiptext">{copyText}
+        </span>
+        </p>
       <p style={{color: color}}>{colorName}</p>
     </div>);
   }
