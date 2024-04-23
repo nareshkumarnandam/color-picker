@@ -107,9 +107,11 @@ h1{
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-
+.hexCode:hover{
+  color: cornflowerblue;
+}
 .hexCode:hover .tooltiptext{
-  /* color: cornflowerblue; */
+  
   visibility: visible;
   opacity: 1;
 }
